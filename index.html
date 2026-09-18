@@ -294,7 +294,7 @@
       </div>
       <div class="summary-tile">
         <span class="label">Next to Ship (FIFO)</span>
-        <span class="value" id="stat-next">â</span>
+        <span class="value" id="stat-next">-</span>
       </div>
     </div>
   </section>
@@ -365,7 +365,7 @@
     </div>
 
     <table>
-      <caption>Sorted oldest-expiration-first (FIFO). The top row highlighted with a blue edge is next to ship. Sample data â for demonstration only.</caption>
+      <caption>Sorted oldest-expiration-first (FIFO). The top row highlighted with a blue edge is next to ship. Sample data - for demonstration only.</caption>
       <thead>
         <tr>
           <th scope="col">Product</th>
@@ -388,14 +388,14 @@
 
 <footer>
   <p><strong>Main interaction:</strong> Submit the form above to add a new inventory item. It is placed automatically in FIFO (first-in-first-out) order by expiration date, with its expiration alert and total value calculated for you.</p>
-  <p class="rule"><strong>Standing rule:</strong> The inventory list always sorts by soonest-to-expire (perishable date) first â FIFO order â and no edit or addition may ever cause older stock to display below newer stock. Adjusting a quantity re-renders the ledger but never changes this ordering; only an item's own expiration date can move it in the list.</p>
+  <p class="rule"><strong>Standing rule:</strong> The inventory list always sorts by soonest-to-expire (perishable date) first - FIFO order - and no edit or addition may ever cause older stock to display below newer stock. Adjusting a quantity re-renders the ledger but never changes this ordering; only an item's own expiration date can move it in the list.</p>
 </footer>
 
 <script>
 (function () {
   "use strict";
 
-  /** Sample starting data â fictional, for demonstration only. */
+  /** Sample starting data - fictional, for demonstration only. */
   function daysFromNow(n) {
     const d = new Date();
     d.setHours(0, 0, 0, 0);
@@ -547,7 +547,7 @@
     statCount.textContent = String(sorted.length);
     statValue.textContent = money(totalValue);
     statCritical.textContent = String(criticalCount);
-    statNext.textContent = sorted.length ? sorted[0].product : "â";
+    statNext.textContent = sorted.length ? sorted[0].product : "-";
   }
 
   function escapeHtml(str) {
